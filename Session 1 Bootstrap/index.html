@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-danger bg-opacity-75">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pet Zone</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Blog</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="https://i.pinimg.com/564x/3a/5a/74/3a5a74e4978be60bcae2ff8f0bdce658.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dogs</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="https://st2.depositphotos.com/1000877/6724/i/950/depositphotos_67244621-stock-photo-cat-sleeping.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cats</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="data:image/jpeg;base64,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"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Birds</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="https://www.petakids.com/wp-content/uploads/2015/11/Cute-Red-Bunny.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bunnies</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="https://ae01.alicdn.com/kf/HTB1JnhuBviSBuNkSnhJq6zDcpXaY.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Hamsters</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-info bg-opacity-25 card" style="width: 18rem">
+            <img
+              src="https://www.thesprucepets.com/thmb/Dwb8D1IGzQpPqCguhzUi3vUV8tM=/3556x2667/smart/filters:no_upscale()/sleeping-rats-120694080-57ffdee53df78cbc2894461a.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mice</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

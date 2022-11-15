@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="img1" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+    <img id="img2" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+    <button onclick="restart()">Restart</button>
+
+    <script>
+      card1 = {
+        id: "img1",
+        side: "back",
+        back: "backCard.png",
+        value: "2_of_clubs.png",
+      };
+
+      card2 = {
+        id: "img2",
+        side: "back",
+        back: "backCard.png",
+        value: "2_of_diamonds.png",
+      };
+
+      cardsValues = ["2_of_diamonds.png", "2_of_clubs.png"];
+      cards = [card1, card2];
+
+      function flipCard(cardID) {
+        for (let i = 0; i < cards.length; i++) {
+          if (cardID == cards[i]["id"]) {
+            document.getElementById(cardID).src = cards[i]["value"];
+          }
+        }
+      }
+
+      function restart() {
+        shuffleCards();
+        for (let i = 0; i < cards.length; i++) {
+          cards[i]["value"] = cardsValues[i];
+          document.getElementById(cards[i]["id"]).src = cards[i]["value"];
+        }
+        setTimeout(() => {
+          for (let i = 0; i < cards.length; i++) {
+            document.getElementById(cards[i]["id"]).src = cards[i]["back"];
+          }
+        }, 2000);
+      }
+
+      function shuffleCards() {
+        randomNumber = Math.random();
+        console.log(randomNumber);
+        if (randomNumber > 0.5) {
+          cardsValues = ["2_of_diamonds.png", "2_of_clubs.png"];
+        } else {
+          cardsValues = ["2_of_clubs.png", "2_of_diamonds.png"];
+        }
+      }
+    </script>
+  </body>
+</html>
